@@ -1,0 +1,241 @@
+
+
+/*
+.front {
+  margin: auto;
+  transform-origin: center; /* Set the transform origin to the center */
+  /*-webkit-animation: anim 1s linear 1;*/
+  /*animation: anim 1s linear 1;*/
+  /*box-shadow: 50px 5px 5px rgba(0, 0, 0, 0.9);*/
+  /*border: 2px solid #ffe9c6;*/
+  /*backface-visibility: visible;*/
+/*}*/
+
+
+/*@-webkit-keyframes anim {
+  0% {
+    transform: scale(0.25) rotateY(0deg);
+  }
+  25% {
+    transform: scale(0.5) rotateY(90deg);
+  }
+  50% {
+    transform: scale(0.75) rotateY(180deg);
+  }
+  75% {
+    transform: scale(0.9) rotateY(270deg);
+  }
+  100% {
+    transform: scale(1) rotateY(360deg);
+  }
+}
+
+@keyframes anim {
+  0% {
+    transform: scale(0.25) rotateY(0deg);
+  }
+  25% {
+    transform: scale(0.5) rotateY(90deg);
+  }
+  50% {
+    transform: scale(0.75) rotateY(180deg);
+  }
+  75% {
+    transform: scale(0.9) rotateY(270deg);
+  }
+  100% {
+    transform: scale(1) rotateY(360deg);
+  }
+}*/
+
+/*--------------------------------------------------------------*/
+body {
+  background-color: #fef7d9;
+  /*background-color: black;*/
+  /*justify-content: center;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+}
+/*
+.dragon{
+  position: relative;
+ 
+}*/
+.dragon {
+      position: fixed;
+       z-index: 3;
+      top: 0;
+      left: 0;
+      display: block;
+      animation: zoomAndMove 5s ease-in-out forwards;
+    }
+
+    @keyframes zoomAndMove {
+      0% {
+        transform: translate(0, 0) scale(0);
+      }
+      50% {
+        transform: translate(10vw, 10vh) scale(1);
+      }
+      100% {
+        transform: translate(100vw, 100vh) scale(0);
+      }
+    }
+.dragonfire {
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      /*left: 0;*/
+      /*animation: zoomAndMove 5s ease-in-out forwards;*/
+      right: 0;
+      transform: scaleX(-1);
+}
+.firebottom {
+      position: fixed;
+      z-index: 3;
+      width: 100%;
+      height: 90%
+}
+.pos1{
+  bottom: -20px;
+}
+.pos2{
+  top:-20px;
+  transform: scaleY(-1);
+}
+
+#vara-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #97592b;
+  position: relative;
+  z-index: 2;
+  margin: 40% 0%;
+}
+#vara-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #97592b;
+  position: relative;
+  z-index: 2;
+}
+.book {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 500px;
+  cursor: pointer;
+  backface-visibility: visible;
+  position: relative;
+  /*z-index: 1;*/
+  margin: 6%;
+}
+
+.front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
+  transform-style: preserve-3d;
+  position: absolute;
+  width: 400px;
+  height: 100%;
+  top: 0; left: 0;
+  transform-origin: left center;
+  transition: transform .5s ease-in-out, box-shadow .35s ease-in-out;
+}
+
+.front, .back {
+  background: black;
+}
+
+.front, .page1, .page3, .page5 {
+  border-bottom-right-radius: .5em;
+  border-top-right-radius: .5em;
+}
+
+.back, .page2, .page4, .page6 {
+  border-bottom-right-radius: .5em;
+  border-top-right-radius: .5em;
+}
+
+.page1 { 
+  background: #fef7d9;
+}
+
+.page2 {
+  background: #fef7d9;
+}
+
+.page3 {
+  background: #fef7d9;
+}
+
+.page4 {
+  background: #fef7d9;
+
+}
+
+.page5 {
+  background: #fef7d9;
+  
+}
+
+.page6 {
+  background: #fef7d9;
+}
+
+.book:hover .front {
+  transform: rotateY(-160deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .7);
+}
+
+.book:hover .page1 {
+  transform: rotateY(-150deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .7);
+}
+
+.book:hover .page2 {
+  transform: rotateY(-30deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .7);
+}
+
+.book:hover .page3 {
+  transform: rotateY(-140deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .7);
+}
+
+.book:hover .page4 {
+  transform: rotateY(-40deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .7);
+}
+
+.book:hover .page5 {
+  transform: rotateY(-130deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .7);
+  /*z-index: 1;*/
+}
+
+.book:hover .page6 {
+  transform: rotateY(-50deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .7);
+  /*z-index: 1;*/
+}
+
+.book:hover .back {
+  transform: rotateY(-20deg) scale(1.1);
+}
+
+#overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      opacity: 0;
+      pointer-events: none; /* Allow interaction with elements behind the overlay */
+      transition: opacity 1s ease-in-out;
+    }
