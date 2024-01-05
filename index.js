@@ -1,27 +1,5 @@
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   // Initialize Vara
-  //   var vara = new Vara(
-  //     "#vara-container",
-  //     "https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Satisfy/SatisfySL.json",
-  //     [
-  //       {
-  //         text: "A dragon without its rider is a tragedy.",
-  //         fontSize: 40,
-  //         strokeWidth: 2.5,
-  //         delay: 1500
-  //       },
-  //       {
-  //         text: "A rider without their dragon is dead.",
-  //         fontSize: 40,
-  //         strokeWidth: 2.5,
-  //         delay:200
-          
-  //       }
-  //     ]
-  //   );
-  // });
 
-//1500 /200
+//Handwritten quote set into motion
   document.addEventListener("DOMContentLoaded", function () {
   // Initialize Vara
   var vara = new Vara(
@@ -42,19 +20,6 @@
       },
     ]
   );
-  // var vara = new Vara(
-  //   "#vara-container2",
-  //   "https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Satisfy/SatisfySL.json",
-  //   [
-  //     {
-  //       text: "A rider without their dragon is dead.",
-  //       fontSize: 40,
-  //       strokeWidth: 2.5,
-  //       delay: 3600,
-  //     },
-  //   ]
-  // );
-
   // Show the book front initially
   var front = document.querySelector(".front");
   var page1 = document.querySelector(".page1");
@@ -64,7 +29,9 @@
   var page5 = document.querySelector(".page5");
   var page6 = document.querySelector(".page6");
   var back = document.querySelector(".back");
+
   var shadow="0 1em 3em 0 rgba(0, 0, 0, .7)";
+  
   var dragon = document.querySelector(".dragon");
   var dragonfire = document.querySelector(".dragonfire");
   var firebottom = document.getElementsByClassName("firebottom");
@@ -89,26 +56,25 @@
     back.style.boxShadow = shadow;
 
   }, 1000);
+  //Step 2 : Fly the dragon in
   setTimeout(function () {
     dragon.style.display= "flex";
 
   },5000);
+  //Step 3: Let him set the book aflame
     setTimeout(function () {
     dragonfire.style.display="flex";
   },10000);
+  //Step 4: Watch everything burn down
   setTimeout(function () {
     dragonfire.style.display="none";
     for (var i = 0; i < firebottom.length; i++ ) {
       firebottom[i].style.display= "flex";
     }
   },10500);
+  //Step 5: Ensure only a black void remains
     setTimeout(function () {
     overlay.style.opacity="1";
   },14000);
-  // setTimeout(function () {
-  //   for (var i = 0; i < firebottom.length; i++ ) {
-  //     firebottom[i].style.display= "none";
-  //   }
-  // },15000);
   
 });

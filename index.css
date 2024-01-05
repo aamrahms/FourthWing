@@ -1,54 +1,5 @@
 
 
-/*
-.front {
-  margin: auto;
-  transform-origin: center; /* Set the transform origin to the center */
-  /*-webkit-animation: anim 1s linear 1;*/
-  /*animation: anim 1s linear 1;*/
-  /*box-shadow: 50px 5px 5px rgba(0, 0, 0, 0.9);*/
-  /*border: 2px solid #ffe9c6;*/
-  /*backface-visibility: visible;*/
-/*}*/
-
-
-/*@-webkit-keyframes anim {
-  0% {
-    transform: scale(0.25) rotateY(0deg);
-  }
-  25% {
-    transform: scale(0.5) rotateY(90deg);
-  }
-  50% {
-    transform: scale(0.75) rotateY(180deg);
-  }
-  75% {
-    transform: scale(0.9) rotateY(270deg);
-  }
-  100% {
-    transform: scale(1) rotateY(360deg);
-  }
-}
-
-@keyframes anim {
-  0% {
-    transform: scale(0.25) rotateY(0deg);
-  }
-  25% {
-    transform: scale(0.5) rotateY(90deg);
-  }
-  50% {
-    transform: scale(0.75) rotateY(180deg);
-  }
-  75% {
-    transform: scale(0.9) rotateY(270deg);
-  }
-  100% {
-    transform: scale(1) rotateY(360deg);
-  }
-}*/
-
-/*--------------------------------------------------------------*/
 body {
   background-color: #fef7d9;
   /*background-color: black;*/
@@ -238,4 +189,55 @@ body {
       opacity: 0;
       pointer-events: none; /* Allow interaction with elements behind the overlay */
       transition: opacity 1s ease-in-out;
-    }
+  }
+
+/* Moved code into JS code"  
+/*
+.front {
+  margin: auto;
+  transform-origin: center; /* Set the transform origin to the center */
+  /*-webkit-animation: anim 1s linear 1;*/
+  /*animation: anim 1s linear 1;*/
+  /*box-shadow: 50px 5px 5px rgba(0, 0, 0, 0.9);*/
+  /*border: 2px solid #ffe9c6;*/
+  /*backface-visibility: visible;*/
+/*}*/
+
+
+/*@-webkit-keyframes anim {
+  0% {
+    transform: scale(0.25) rotateY(0deg);
+  }
+  25% {
+    transform: scale(0.5) rotateY(90deg);
+  }
+  50% {
+    transform: scale(0.75) rotateY(180deg);
+  }
+  75% {
+    transform: scale(0.9) rotateY(270deg);
+  }
+  100% {
+    transform: scale(1) rotateY(360deg);
+  }
+}
+
+@keyframes anim {
+  0% {
+    transform: scale(0.25) rotateY(0deg);
+  }
+  25% {
+    transform: scale(0.5) rotateY(90deg);
+  }
+  50% {
+    transform: scale(0.75) rotateY(180deg);
+  }
+  75% {
+    transform: scale(0.9) rotateY(270deg);
+  }
+  100% {
+    transform: scale(1) rotateY(360deg);
+  }
+}*/
+
+/*--------------------------------------------------------------*/
